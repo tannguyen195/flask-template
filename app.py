@@ -10,6 +10,7 @@ from resources.store import Store, StoreList
 app = Flask(__name__)
 app.config['SQLAMCHEMY_DATABASE_URI'] = 'sqlite:data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['PROPAGATE_EXCEPTIONS'] = True
 app.secret_key = 'tan'
 api = Api(app)
 
